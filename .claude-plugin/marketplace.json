@@ -13,7 +13,7 @@
   "plugins": [
     {
       "name": "github-mcp",
-      "description": "Connects Claude to GitHub's MCP endpoint via a local auth proxy — repos, issues, PRs, code search, and more.",
+      "description": "Connects Claude to GitHub's MCP — repos, issues, PRs, code search, and more.",
       "version": "1.0.0",
       "author": {
         "name": "719media",
