@@ -1,0 +1,27 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-desktop-github-extension",
+  "version": "1.0.0",
+  "description": "Private plugin marketplace for the 719 org — skills, commands, and tools for GTM and internal workflows.",
+  "owner": {
+    "name": "Scratchpad",
+    "email": "benrotz@scratchpad.com"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "github-mcp",
+      "description": "Connects Claude to GitHub's MCP endpoint via a local auth proxy — repos, issues, PRs, code search, and more.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Scratchpad",
+        "email": "benrotz@scratchpad.com"
+      },
+      "source": "./plugins/github-mcp",
+      "category": "developer-tools",
+      "keywords": ["github", "mcp", "proxy", "git", "issues", "pull-requests"]
+    }
+  ]
+}

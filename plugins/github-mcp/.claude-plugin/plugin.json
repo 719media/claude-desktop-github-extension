@@ -1,0 +1,45 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "github-mcp",
+  "display_name": "GitHub MCP",
+  "version": "1.0.0",
+  "description": "Connects Claude to GitHub's MCP server via Docker. Gives Claude full access to GitHub tools — repos, issues, PRs, code search, and more.",
+  "long_description": "Runs the official GitHub MCP server (ghcr.io/github/github-mcp-server) locally via Docker using a Personal Access Token. Supports all GitHub MCP capabilities including repos, issues, pull requests, code search, and more.",
+  "author": {
+    "name": "Scratchpad",
+    "email": "benrotz@scratchpad.com"
+  },
+  "license": "MIT",
+  "categories": ["developer-tools"],
+  "keywords": ["github", "mcp", "git", "issues", "pull-requests", "docker"],
+  "server": {
+    "type": "stdio",
+    "mcp_config": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${user_config.github_token}"
+      }
+    }
+  },
+  "user_config": {
+    "github_token": {
+      "type": "string",
+      "title": "GitHub Personal Access Token",
+      "description": "A classic PAT or fine-grained token with the scopes you need (e.g. repo, read:org). Create one at https://github.com/settings/tokens",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "requirements": ["docker"]
+  }
+}
