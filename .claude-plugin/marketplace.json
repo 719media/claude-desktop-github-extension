@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "description": "Private plugin marketplace for the 719 org — skills, commands, and tools for GTM and internal workflows.",
   "owner": {
-    "name": "Scratchpad",
-    "email": "benrotz@scratchpad.com"
+    "name": "719media",
+    "email": "ben@719media.com"
   },
   "metadata": {
     "pluginRoot": "./plugins"
@@ -16,8 +16,8 @@
       "description": "Connects Claude to GitHub's MCP endpoint via a local auth proxy — repos, issues, PRs, code search, and more.",
       "version": "1.0.0",
       "author": {
-        "name": "Scratchpad",
-        "email": "benrotz@scratchpad.com"
+        "name": "719media",
+        "email": "ben@719media.com"
       },
       "source": "./plugins/github-mcp",
       "category": "developer-tools",

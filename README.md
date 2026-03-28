@@ -45,7 +45,7 @@ Add an entry to `.claude-plugin/marketplace.json` pointing to the external repo:
   "name": "my-plugin",
   "source": {
     "source": "github",
-    "repo": "scratchpad-ai/my-plugin-repo",
+    "repo": "719media/my-plugin-repo",
     "ref": "main"
   }
 }
