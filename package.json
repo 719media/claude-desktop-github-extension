@@ -1,0 +1,20 @@
+{
+  "name": "github-mcp-proxy",
+  "version": "1.0.0",
+  "description": "Local MCP proxy for GitHub — Claude Desktop Extension",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --format=esm --outfile=server/index.js --banner:js='import{createRequire}from\"module\";const require=createRequire(import.meta.url);'",
+    "build:check": "tsc --noEmit",
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "package": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.21.0",
+    "typescript": "^5.4.0"
+  }
+}
